@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router";
 
 export default class App extends Component {
   constructor() {
@@ -49,8 +48,6 @@ export default class App extends Component {
         <div className="books-container">
           {this.state.books && this.renderBooks()}
         </div>
-
-        {/* <Link to="book/add">Add</Link> */}
       </div>
     );
   }
