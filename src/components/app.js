@@ -15,7 +15,7 @@ export default class App extends Component {
 
   getData() {
     axios
-      .get("http://127.0.0.1:5000/book/get")
+      .get("https://mae-bookstore-backend-api.herokuapp.com/book/get")
       .then((response) => {
         this.setState({ books: response.data });
         console.log("response: ", response.data);

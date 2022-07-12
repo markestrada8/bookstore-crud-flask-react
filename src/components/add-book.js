@@ -11,7 +11,7 @@ export default function AddBook() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://127.0.0.1:5000/book/add", {
+      .post("https://mae-bookstore-backend-api.herokuapp.com/book/add", {
         title: title,
         author: author,
         description: description,
