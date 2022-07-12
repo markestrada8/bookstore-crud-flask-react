@@ -1,19 +1,22 @@
 .nav-title {
   color: rgb(24, 24, 24);
+  margin-left: 50px;
 }
 
 .navbar {
   background-color: #7d9d9c;
+  height: 100px;
   display: flex;
   font-size: 2.5em;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0px 5px 25px 2px rgba(9, 8, 8, 0.42);
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0px 40px;
   font-weight: 400;
   border: none;

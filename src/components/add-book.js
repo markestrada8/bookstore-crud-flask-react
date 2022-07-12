@@ -27,8 +27,8 @@ export default function AddBook() {
 
   return (
     <div className="add-book">
-      <h1>Enter Book Information</h1>
       <form className="add-book-form" onSubmit={handleSubmit}>
+        <h1>Enter Book Information</h1>
         <input
           className="add-book-input"
           onChange={() => setTitle(event.target.value)}
