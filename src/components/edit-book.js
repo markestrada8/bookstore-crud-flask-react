@@ -39,6 +39,7 @@ export default function EditBook(props) {
         console.log("Error: ", error);
       });
     history.push("/");
+    window.location.reload(false);
   };
 
   return (
