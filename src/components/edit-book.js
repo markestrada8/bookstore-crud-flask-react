@@ -23,7 +23,7 @@ export default function EditBook(props) {
     event.preventDefault();
     axios
       .put(
-        `http://127.0.0.1:5000/book/${location.state.id}`,
+        `https://mae-bookstore-backend-api.herokuapp.com/book/${location.state.id}`,
         {
           title: title,
           author: author,

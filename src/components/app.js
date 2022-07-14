@@ -17,7 +17,7 @@ export default class App extends Component {
   handleDelete = (id) => {
     axios
       // .delete(`https://mae-bookstore-backend-api.herokuapp.com/book/${id}`)
-      .delete(`http://127.0.0.1:5000/book/${id}`)
+      .delete(`https://mae-bookstore-backend-api.herokuapp.com/book/${id}`)
       .then((response) => {
         // this.setState({ books: response.data });
         console.log("response: ", response.data);
@@ -32,7 +32,7 @@ export default class App extends Component {
 
   getData() {
     axios
-      .get("http://127.0.0.1:5000/book/get")
+      .get("https://mae-bookstore-backend-api.herokuapp.com/book/get")
       .then((response) => {
         this.setState({ books: response.data });
         console.log("response: ", response.data);
