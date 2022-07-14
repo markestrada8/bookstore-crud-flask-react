@@ -5,6 +5,7 @@ import App from "./components/app";
 import { Switch, Route } from "react-router";
 import AddBook from "../src/components/add-book";
 import Navbar from "../src/components/navbar";
+import EditBook from "../src/components/edit-book";
 
 import "./style/main.scss";
 
@@ -18,6 +19,9 @@ function main() {
         </Route>
         <Route path="/add-book">
           <AddBook />
+        </Route>
+        <Route path="/edit-book">
+          <EditBook />
         </Route>
       </Switch>
     </BrowserRouter>,

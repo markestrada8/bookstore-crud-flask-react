@@ -11,11 +11,28 @@ export default class App extends Component {
     };
 
     this.getData = this.getData.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
+
+  handleDelete = (id) => {
+    axios
+      // .delete(`https://mae-bookstore-backend-api.herokuapp.com/book/${id}`)
+      .delete(`http://127.0.0.1:5000/book/${id}`)
+      .then((response) => {
+        // this.setState({ books: response.data });
+        console.log("response: ", response.data);
+        this.setState({
+          books: this.state.books.filter((book) => book.id !== id),
+        });
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
+  };
 
   getData() {
     axios
-      .get("https://mae-bookstore-backend-api.herokuapp.com/book/get")
+      .get("http://127.0.0.1:5000/book/get")
       .then((response) => {
         this.setState({ books: response.data });
         console.log("response: ", response.data);
@@ -31,7 +48,9 @@ export default class App extends Component {
 
   renderBooks() {
     return this.state.books.map((book) => {
-      return <BookItem key={book.id} book={book} />;
+      return (
+        <BookItem key={book.id} handleDelete={this.handleDelete} book={book} />
+      );
     });
   }
 
